@@ -9,8 +9,8 @@ from torchvision.transforms import ToTensor
 start_time = time.time()
 
 learning_rate = 0.1
-batch_size = 64
-epochs = 5
+batch_size = 100
+epochs = 10
 
 training_data = datasets.FashionMNIST(
     root="data",
