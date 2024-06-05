@@ -9,7 +9,7 @@ from torchvision.transforms import ToTensor
 start_time = time.time()
 
 learning_rate = 0.1
-batch_size = 10
+batch_size = 64
 epochs = 5
 
 training_data = datasets.FashionMNIST(
@@ -21,7 +21,7 @@ training_data = datasets.FashionMNIST(
 
 test_data = datasets.FashionMNIST(
     root="data",
-    train=False,
+    train=True,
     download=True,
     transform=ToTensor()
 )
@@ -38,7 +38,11 @@ class NeuralNetwork(nn.Module):
             nn.ReLU(),
             nn.Linear(512, 512),
             nn.ReLU(),
-            nn.Linear(512, 10),
+            nn.Linear(512, 100),
+            nn.ReLU(),
+            nn.Linear(100, 100),
+            nn.ReLU(),
+            nn.Linear(100, 10),
         )
 
     def forward(self, x):
