@@ -21,7 +21,7 @@ training_data = datasets.FashionMNIST(
 
 test_data = datasets.FashionMNIST(
     root="data",
-    train=True,
+    train=False,
     download=True,
     transform=ToTensor()
 )
