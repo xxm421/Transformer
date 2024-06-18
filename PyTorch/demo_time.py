@@ -10,7 +10,7 @@ start_time = time.time()
 
 learning_rate = 0.1
 batch_size = 100
-epochs = 10
+epochs = 5
 
 training_data = datasets.FashionMNIST(
     root="data",
