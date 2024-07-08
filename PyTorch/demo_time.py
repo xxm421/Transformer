@@ -26,8 +26,8 @@ test_data = datasets.FashionMNIST(
     transform=ToTensor()
 )
 
-train_dataloader = DataLoader(training_data, batch_size)
-test_dataloader = DataLoader(test_data, batch_size)
+train_dataloader = DataLoader(training_data, batch_size, shuffle=True)
+test_dataloader = DataLoader(test_data, batch_size, shuffle=True)
 
 class NeuralNetwork(nn.Module):
     def __init__(self):
